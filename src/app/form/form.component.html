@@ -1,0 +1,65 @@
+<form novalidate [formGroup]="formModel">
+  <div class="bmi-form-item">
+    <div class="form-group">
+      <label>
+        <span>Date of birth</span>
+        <input class="form-control" type="date"  formControlName="birth">
+      </label>
+    </div>
+  </div>
+  <div class="bmi-form-item">
+    <div class="form-group">
+      <label>
+        <span>Height</span>
+        <div class="btn-group btn-group-toggle btn-radio-group"  data-toggle="buttons">
+          <label class="btn " [ngClass]="{active: formModel.get('heightSystem').value == 'Imperial'}">
+            <input type="radio" name="heightSystem" formControlName="heightSystem"  value="Imperial" autocomplete="off"> IMPERIAL
+          </label>
+          <label class="btn " [ngClass]="{active: formModel.get('heightSystem').value == 'Metric'}">
+            <input type="radio"  name="heightSystem" formControlName="heightSystem"   value="Metric" autocomplete="off" > METRIC
+          </label>
+        </div>
+        <input class="form-control" type="text" placeholder="height" formControlName="height"><span></span>
+      </label>
+      </div>
+    </div>
+  <div class="bmi-form-item">
+    <div class="form-group">
+      <label>
+        <span>Weight</span>
+        <div class="btn-group btn-group-toggle btn-radio-group"  data-toggle="buttons">
+          <label class="btn " [ngClass]="{active: formModel.get('weightSystem').value == 'Imperial'}">
+            <input type="radio" name="weightSystem" formControlName="weightSystem"  value="Imperial" autocomplete="off"> IMPERIAL
+          </label>
+          <label class="btn " [ngClass]="{active: formModel.get('weightSystem').value == 'Metric'}">
+            <input type="radio"  name="weightSystem" formControlName="weightSystem"   value="Metric" autocomplete="off" > METRIC
+          </label>
+        </div>
+        <input class="form-control" type="text" placeholder="weight" formControlName="weight">
+      </label>
+    </div>
+    </div>
+  <div class="bmi-form-item">
+     <div class="form-group">
+     <span>Gender</span>
+      <div class="btn-group btn-group-toggle btn-radio-group"  data-toggle="buttons">
+        <label class="btn " [ngClass]="{active: formModel.get('gender').value == 'male'}">
+          <input type="radio" name="gender" formControlName="gender"  value="male" autocomplete="off"> Male
+        </label>
+        <label class="btn " [ngClass]="{active: formModel.get('gender').value == 'female'}">
+          <input type="radio"  name="gender" formControlName="gender"   value="female" autocomplete="off"  > Female
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="bmi-form-item">
+    <h4>Body mass index (BMI) = <span class="result-text">{{result}}</span></h4>
+    <div class="result-container">
+      <span class="mass-indicator underweight-indicator">Underweight</span>
+      <span class="mass-indicator normal-indicator">Health weight</span>
+      <span class="mass-indicator overweight-indicator">Overweight</span>
+      <span class="mass-indicator obese-indicator">Obese</span>
+    </div>
+  </div>
+
+</form>

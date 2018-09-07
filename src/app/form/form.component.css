@@ -1,0 +1,82 @@
+.bmi-form-item {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 30px 0;
+}
+
+.btn, input {
+  border-radius: 20px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.btn-radio-group {
+  display: block;
+  padding: 10px 0;
+}
+
+.btn-radio-group label.btn {
+  border: 2px solid #F2F3F3;
+  background-color: #F2F3F3;
+}
+
+
+.btn-radio-group label.btn.active {
+  color: #11A8A8;
+  background-color: #FFF;
+}
+
+.result-container {
+  margin: 10px 0;
+  position: relative;
+  padding: 29px 0;
+}
+
+.mass-indicator {
+  display: inline-block;
+  margin-left: 1px;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.underweight-indicator {
+  margin-left: 0;
+  background-color: #ED1C24;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.normal-indicator {
+  background-color: #78A50E;
+}
+.overweight-indicator {
+  background-color: #FDB913;
+}
+.obese-indicator {
+  background-color: #ED1C24;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.mass-indicator::after {
+  position: absolute;
+  bottom: 0;
+  color: #000;
+}
+.underweight-indicator::after {
+   content: "18.5";
+}
+.normal-indicator::after {
+   content: "25";
+}
+.overweight-indicator::after {
+   content: "30";
+}
+
+.result-text {
+  color: #78A50E;
+  font-weight: bold;
+}
